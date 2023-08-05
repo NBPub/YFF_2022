@@ -68,7 +68,11 @@
 		  {% include 'figures/RB_total_2022.html' %}
 	    </div>
 	    <div class="row">
-	      <p>{{ fact_check_rb }}</p>
+	      <p>
+		    Calculated rushing and receiving scoring based on stats; manual calculation accounts for {{ (100*fact_check_rb)|round(1) }}%  of RBs actual points.
+			<br><code class="text-info">Receiving Pts = Receiving_Yds * 0.1 + Receiving_TD * 6 + Receiving_Rec</code>
+			<br><code class="text-info">Rushing Pts = Rushing_Yds * 0.1 + Rushing_TD * 6</code><em class="mx-3">ignored fumbles</em>
+		  </p>
 		  {% include 'figures/2d_rb.html' %}
 	    </div>
 	    <div class="row">
@@ -117,7 +121,11 @@
 		  {% include 'figures/QB_total_2022.html' %}
 	    </div>		  
 	    <div class="row">
-	      <p>{{ fact_check_qb }}</p>
+	      <p>
+		    Calculated passing and rushing scoring based on stats; manual calculation accounts for {{ (100*fact_check_qb)|round(1) }}% of QBs actual points.
+			<br><code class="text-info">Rushing Pts = Rushing_Yds * 0.1 + Rushing_TD * 6 + Fum_Lost * -2</code>
+			<br><code class="text-info">Passing Pts = Passing_Yds * 0.04 + Passing_TD * 4 + Passing_Int * -2</code>
+		  </p>
 		  {% include 'figures/2d_qb.html' %}
 	    </div>
 	    <div class="row">
@@ -130,12 +138,23 @@
   
   <div class="tab-pane fade" id="methods-tab-pane" role="tabpanel" tabindex="0">	
 	<h2>Methods</h2>
+
 	  <ul>
-	    <li>data extracted from Yahoo Fantasy player list tables, selecting for 2022 season total.</li>
+	    <li>data extracted from <a href="https://sports.yahoo.com/fantasy/">Yahoo Fantasy</a> player list tables, selecting for 2022 season total.</li>
 		<li>team is the player's team in 2023 in most cases.</li>
 		<li>fantasy scoring is league specific, and a few values are different from the service's default values</li>
 		<li>processed data graphed using <a href="https://plotly.com/graphing-libraries/">Plotly</a>, hosted on Github pages. <a href="https://github.com/NBPub/YFF_2022">Repository</a></li>
 	  </ul>
+
+	  <div class="row mt-5">
+	    <p>league website abbreviations:</p>
+	    <div class="col">
+		  {% include 'tables/positions_table.html' %}
+		</div>
+	    <div class="col">
+		  {% include 'tables/stats_table.html' %}
+		</div>
+	  </div>
   </div>
   
 </div>
