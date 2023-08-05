@@ -64,10 +64,10 @@
   
   <div class="tab-pane fade" id="rb-tab-pane" role="tabpanel" tabindex="0">
 	  <h2>Running Backs</h2> 
-	    <div class="row">
+	    <div class="col">
 		  {% include 'figures/RB_total_2022.html' %}
 	    </div>
-	    <div class="row">
+	    <div class="col">
 	      <p>
 		    Calculated rushing and receiving scoring based on stats; manual calculation accounts for {{ (100*fact_check_rb)|round(1) }}%  of RBs actual points.
 			<br><code class="text-info">Receiving Pts = Receiving_Yds * 0.1 + Receiving_TD * 6 + Receiving_Rec</code>
@@ -75,52 +75,52 @@
 		  </p>
 		  {% include 'figures/2d_rb.html' %}
 	    </div>
-	    <div class="row">
+	    <div class="col-12">
 		  {% include 'figures/3d_rb.html' %}
 	    </div>	
-	    <div class="row">
+	    <div class="col">
 		  {% include 'figures/RB_pergame_2022.html' %}
-	    </div> 		
+	    </div>		
   </div>   
   
   <div class="tab-pane fade" id="te-tab-pane" role="tabpanel" tabindex="0">	
 	  <h2>Tight Ends</h2> 	  
-	    <div class="row">
+	    <div class="col">
 	  	  {% include 'figures/TE_total_2022.html' %}
 	    </div>  
-	    <div class="row">
+	    <div class="col">
 	  	  {% include 'figures/targets_te.html' %}
 	    </div>  
-		<div class="row">
+		<div class="col">
 	  	  {% include 'figures/receptions_te.html' %}
 	    </div> 
-	    <div class="row">
+	    <div class="col">
 	      {% include 'figures/TE_pergame_2022.html' %}
 	    </div>		
   </div>   
   
   <div class="tab-pane fade" id="wr-tab-pane" role="tabpanel" tabindex="0">	
 	  <h2>Wide Receivers</h2> 
-	    <div class="row">
+	     <div class="col">
 		  {% include 'figures/WR_total_2022.html' %}
 	    </div>	
-	    <div class="row">
+	    <div class="col">
 		  {% include 'figures/targets_wr.html' %}
 	    </div>  
-	    <div class="row">
+	    <div class="col">
 		  {% include 'figures/receptions_wr.html' %}
 	    </div> 
-	    <div class="row">
+	    <div class="col">
 		  {% include 'figures/WR_pergame_2022.html' %}
 	    </div>		
   </div>   
   
   <div class="tab-pane fade" id="qb-tab-pane" role="tabpanel" tabindex="0">	  
 	  <h2>Quarterbacks</h2>
-	    <div class="row">
+	    <div class="col">
 		  {% include 'figures/QB_total_2022.html' %}
 	    </div>		  
-	    <div class="row">
+	    <div class="col">
 	      <p>
 		    Calculated passing and rushing scoring based on stats; manual calculation accounts for {{ (100*fact_check_qb)|round(1) }}% of QBs actual points.
 			<br><code class="text-info">Rushing Pts = Rushing_Yds * 0.1 + Rushing_TD * 6 + Fum_Lost * -2</code>
@@ -128,10 +128,10 @@
 		  </p>
 		  {% include 'figures/2d_qb.html' %}
 	    </div>
-	    <div class="row">
+	    <div class="col-12">
 		  {% include 'figures/3d_qb.html' %}
 	    </div>	
-		<div class="row">
+		<div class="col">
 		  {% include 'figures/QB_pergame_2022.html' %}
 	    </div>
   </div>

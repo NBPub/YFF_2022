@@ -260,7 +260,7 @@ def rb_graphs(df):
     }) 
     # 3d
     fig3d = px.scatter_3d(df, y='Receiving Pts', x='Rushing Pts', z='Fantasy Pts', color='Receiving Pts', size='Fantasy Pts', color_continuous_scale='jet_r',
-                hover_data=['Name', 'Team', 'Fantasy Pts', 'Rankings_Actual'],)
+                hover_data=['Name', 'Team', 'Fantasy Pts', 'Rankings_Actual'], height=800, width=1200)
 
     fig3d.update_traces(hovertemplate='<b>%{customdata[0]} (%{customdata[1]})</b>\
     <br>%{y:.0f} rec | %{x:.0f} rush\
@@ -310,7 +310,7 @@ def qb_graphs(df):
     })    
     # 3d
     fig3d = px.scatter_3d(df, y='Rushing Pts', x='Passing Pts', z='Fantasy Pts', color='Rushing Pts', size='Fantasy Pts', color_continuous_scale='jet_r',
-                    hover_data=['Name', 'Fantasy Pts', 'Team', 'Rankings_Actual'])
+                    hover_data=['Name', 'Fantasy Pts', 'Team', 'Rankings_Actual'], height=800, width=1200)
     
     fig3d.update_traces(hovertemplate='<b>%{customdata[0]} (%{customdata[1]})</b>\
     <br>%{y:.0f} rush | %{x:.0f} pass\
